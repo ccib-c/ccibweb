@@ -1,0 +1,11 @@
+ErrorDocument 401 /404error.html
+ErrorDocument 403 /404error.html
+ErrorDocument 404 /404error.html
+ErrorDocument 500 /404error.html
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}.html -f 
+RewriteRule (.*) $1.html [L]
+RewriteRule ^apps/(.*) app/$1
+RewriteCond %{HTTP_HOST} ^www\.example\.com [NC]
+RewriteRule ^(.*)$ http://example.com/$1 [L,R=301]

@@ -1,0 +1,1151 @@
+<head>
+<title>CC Apps</title> 
+<meta property="og:title" content="Music app by CCIB Sydent">
+<meta property="og:site_name" content="ccib.vip">
+<meta property="og:url" content="">
+<meta property="og:description" content="Music app by CCIB Sydent">
+<meta property="og:type" content="website">
+<style>body{background-color: #1e1e1e;}
+label,p,span{font-family: monospace;color:#eeeeee}
+button{background-color: #eeeeee;border: none;color: #000000;text-align: center;font-family: monospace;
+text-decoration: none;display: inline-block;font-size:20px;margin: 4px 2px;cursor: pointer;}
+button:disabled{cursor:not-allowed;opacity:0.3}
+.pointer {cursor: pointer;}.cross{cursor: crosshair;}
+.btntool{background-color:#dddddd;color:#000000;border:2px solid #444444;}
+.btntool:hover{background-color:#777;}.btnspec:hover{background-color:#777;}
+.btnspec{background-color:#dddddd;color:#000000;border:2px solid #aa0000;font-size:20px;margin: 4px 2px;}
+.btntype{background-color:#1e1e1e;color:#87ffff;border:0px solid #000000;}
+.btndial{background-color:#dddddd;color:#000000;border: 2px solid #000000;font-size:40px;}
+.btngamew{background-color:#0000;color:#ffffff;border: 2px solid #ffffff;}.btngamew:hover{background-color:#fff3}
+.btngamer{background-color:#0000;color:#ff4e4e;border: 2px solid #ff4e4e;}.btngamer:hover{background-color:#f003}
+.btngamey{background-color:#0000;color:#ffff87;border: 2px solid #ffff87;}.btngamey:hover{background-color:#ff03}
+.btngameb{background-color:#0000;color:#4effff;border: 2px solid #4effff;}.btngameb:hover{background-color:#0ff3}
+.btnplay{background-color:#dddddd;color:#000000;border:2px solid #444444;}.btnplay:hover{background-color:#fff3}
+.squ0{background-color:#ddd0  ;color:#0000  ;border:2px solid #444444;height:40px;width:40px;cursor: crosshair;}
+.squ1{background-color:#dddddd;color:#0000  ;border:2px solid #444444;height:40px;width:40px;cursor: crosshair;}
+.squ2{background-color:#dddddd;color:#000000;border:2px solid #444444;height:40px;width:40px;cursor: crosshair;}  
+.squ3{background-color:#dd0000;color:#0000  ;border:2px solid #444444;height:40px;width:40px;cursor: crosshair;}  
+.squ4{height:200px;width:200px;font-size: 100px;}
+#MemNumM{color:#dd4444}#MemNumT{color:#dddd44}#MemNumH{color:#44dd44}#MemNumS{color:#4444dd}
+.g0{background-color:#dddddd;color:#000000;border: 2px solid #000000;}
+.g1{background-color:#ddffff;color:#000000;border: 2px solid #4ef8f8;}
+.g0:hover,.g1:hover{background-color:#ddffff;border: 2px solid #4ebbbb;}
+.input  {background-color:#1e1e1e;color:#ffffff;border: 1px solid #87ffff;}
+.popup {display: none;position: fixed;z-index: 1;padding-top: 100px;left: 0;top: 0;width: 100%;height: 100%;
+    overflow: auto;background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.4);}
+.popup-content {background-color:#fefefe;margin:auto;padding:20px;border:1px solid#888;width:80%;}
+.close {color: #aaaaaa;float: right;font-size: 28px;font-weight: bold;}
+.close:hover,.close:focus{color: #000;text-decoration: none;cursor: pointer;}
+</style>
+</head>
+<body style ="background-color:hsl(0, 0%, 12%); "><!--#4770c8 #9cdcfe #a586c0 -->
+    <!-- background-image: url('./data/body0.png');-->
+
+<div id="menu">
+<div id="appbar">
+<div style="text-align: center;">
+    <label id="title" style="font-size: 50px;text-align: center;color:#eee">CC's app and games</label>
+</div>
+<div style="text-align: center;" >
+    <button class="btntool"onclick='showhide2(0)'>Intro</button>
+    <button class="btntool"onclick='showhide2(1)'>PlayHz</button>
+    <button class="btntool"onclick='showhide2(2)'>CriticTask</button>  
+    <button class="btnspec pointer"onclick='key_f5()'>Reload&olarr;</button>
+    </div>  
+</div>
+<div style="text-align: center;" id="index">
+    <label id="index_t1" style="font-size: 30px;text-align: center;">Welcome to CC's apps and games</label></br>
+    <label id="index_t2" style="font-size: 30px;text-align: center;">Click on the buttons on top to choose an app/game to play</label></br>
+    <label id="index_t3" style="font-size: 30px;text-align: center;">description(not finished)</label></br>
+
+
+</div>
+
+<div style="text-align: center;" id="ctt">
+    <label style="font-size:20px">Choose a game</label></br>
+    <button class=btngameb onclick="" disabled>Status</button></br>
+    <button class=btngameb onclick="gme(0)" >Logic  Maths</button>
+    <button class=btngameb onclick="gme(1)" disabled>Logic  Bases</button>
+    <button class=btngameb onclick="gme(2)" disabled>Logic  Gates</button></br>
+    <button class=btngameb onclick="gme(3)" >Memory Train</button>
+    <button class=btngamew onclick="gme(4)" >Memory Infinity</button>
+    <button class=btngamew onclick="gme(5)" >Memory Rise</button></br>
+    <button class=btngamey onclick="gme(6)" disabled>CTT    FreePlay</button>
+    <button class=btngamey onclick="gme(7)" disabled>CTT    Timer</button>
+    <button class=btngamer onclick="gme(8)" disabled>CTT    Speedrun</button>
+</br>
+</div>
+<div style="text-align: center;" id="phz">
+    <button class="btntool"onclick='showhidephz(0)'>Intro</button>
+    <button class="btntool"onclick='showhidephz(1)'>Sound</button>
+    <button class="btntool"onclick='showhidephz(2)'>Piano</button>
+    <button class="btntool"onclick='showhidephz(3)'>Dial</button>
+</br>
+<div style="text-align: center;" id="pindex">
+    <label id="index_t1" style="font-size: 30px;text-align: center;">Welcome to CC's Musical App</label></br>
+    <label id="index_t2" style="font-size: 30px;text-align: center;">Click on the buttons on the Grey bar to select app</label>
+</div>
+
+<div style="text-align: center;" id="ptone">
+    <label style="font-size:20px">Play</label>
+    <input style="color: #000000;" type="text" id="tone.hz" size="1" placeholder="tone" value="440">
+    <label style="font-size:20px" id="newusermessage">Hz with sound</label>
+    <button id="tone.sound" class="btntype" onclick="tone_sound()" >square</button>        
+</br>
+    <button onclick="toneplay()" id="tone.play">Play</button>
+    <button onclick='key_f5()'>Stop</button><br></br>
+    <label id="tone_t1" style="font-size:20px;">Press 0-9 and backspace to modifly the ton frequency,<br>
+    Tab the word or press "-" to change tone type,</br>Space to play the Sound,</br>
+    Enter to stop-reload the sound</label></br>
+</div>
+
+<div style="text-align: center;" id="pkeybroad">
+    <label style="font-size:20px">Notes are sounded</label>
+    <button id="keybrd.sound" onclick="keybrd_sound()" class="btntype">square</button>
+    <label style="font-size:20px">with</label>
+    <input type="text" id="keybrd.time" class="input" size="1" placeholder="time" value="100">
+    <label style="font-size:20px">ms</label>
+    <input type="text" id="keybrd.fade" class="input" size="1" placeholder="fade" value="1">
+    <label style="font-size:20px">fading which use</label>
+    <input type="text" id="keybrd.a4" class="input" size="1" placeholder="A4hz" value="440">
+    <label style="font-size:20px">hz as A4. Style:</label>
+    <button id="keybrd.dp" onclick="keybrd_dp()" class="btntype">Flat</button>
+</br>
+<div id="keybroad.shap">
+    <button onclick="pnt(00,0)">C0</button>
+    <button onclick="pnt(01,0)">C#0</button>
+    <button onclick="pnt(02,0)">D0</button>
+    <button onclick="pnt(03,0)">D#0</button>
+    <button onclick="pnt(04,0)">E0</button>
+    <button onclick="pnt(05,0)">F0</button>
+    <button onclick="pnt(06,0)">F#0</button>
+    <button onclick="pnt(07,0)">G0</button>
+    <button onclick="pnt(08,0)">G#0</button>
+    <button onclick="pnt(09,0)">A0</button>
+    <button onclick="pnt(10,0)">A#0</button>
+    <button onclick="pnt(11,0)">B0</button></br>
+    <button onclick="pnt(00,1)">C1</button>
+    <button onclick="pnt(01,1)">C#1</button>
+    <button onclick="pnt(02,1)">D1</button>
+    <button onclick="pnt(03,1)">D#1</button>
+    <button onclick="pnt(04,1)">E1</button>
+    <button onclick="pnt(05,1)">F1</button>
+    <button onclick="pnt(06,1)">F#1</button>
+    <button onclick="pnt(07,1)">G1</button>
+    <button onclick="pnt(08,1)">G#1</button>
+    <button onclick="pnt(09,1)">A1</button>
+    <button onclick="pnt(10,1)">A#1</button>
+    <button onclick="pnt(11,1)">B1</button></br>
+    <button onclick="pnt(00,2)">C2</button>
+    <button onclick="pnt(01,2)">C#2</button>
+    <button onclick="pnt(02,2)">D2</button>
+    <button onclick="pnt(03,2)">D#2</button>
+    <button onclick="pnt(04,2)">E2</button>
+    <button onclick="pnt(05,2)">F2</button>
+    <button onclick="pnt(06,2)">F#2</button>
+    <button onclick="pnt(07,2)">G2</button>
+    <button onclick="pnt(08,2)">G#2</button>
+    <button onclick="pnt(09,2)">A2</button>
+    <button onclick="pnt(10,2)">A#2</button>
+    <button onclick="pnt(11,2)">B2</button></br>
+    <button onclick="pnt(00,3)">C3</button>
+    <button onclick="pnt(01,3)">C#3</button>
+    <button onclick="pnt(02,3)">D3</button>
+    <button onclick="pnt(03,3)">D#3</button>
+    <button onclick="pnt(04,3)">E3</button>
+    <button onclick="pnt(05,3)">F3</button>
+    <button onclick="pnt(06,3)">F#3</button>
+    <button onclick="pnt(07,3)">G3</button>
+    <button onclick="pnt(08,3)">G#3</button>
+    <button onclick="pnt(09,3)">A3</button>
+    <button onclick="pnt(10,3)">A#3</button>
+    <button onclick="pnt(11,3)">B3</button></br>
+    <button onclick="pnt(00,4)">C4</button>
+    <button onclick="pnt(01,4)">C#4</button>
+    <button onclick="pnt(02,4)">D4</button>
+    <button onclick="pnt(03,4)">D#4</button>
+    <button onclick="pnt(04,4)">E4</button>
+    <button onclick="pnt(05,4)">F4</button>
+    <button onclick="pnt(06,4)">F#4</button>
+    <button onclick="pnt(07,4)">G4</button>
+    <button onclick="pnt(08,4)">G#4</button>
+    <button onclick="pnt(09,4)">A4</button>
+    <button onclick="pnt(10,4)">A#4</button>
+    <button onclick="pnt(11,4)">B4</button></br>
+    <button onclick="pnt(00,5)">C5</button>
+    <button onclick="pnt(01,5)">C#5</button>
+    <button onclick="pnt(02,5)">D5</button>
+    <button onclick="pnt(03,5)">D#5</button>
+    <button onclick="pnt(04,5)">E5</button>
+    <button onclick="pnt(05,5)">F5</button>
+    <button onclick="pnt(06,5)">F#5</button>
+    <button onclick="pnt(07,5)">G5</button>
+    <button onclick="pnt(08,5)">G#5</button>
+    <button onclick="pnt(09,5)">A5</button>
+    <button onclick="pnt(10,5)">A#5</button>
+    <button onclick="pnt(11,5)">B5</button></br>
+    <button onclick="pnt(00,6)">C6</button>
+    <button onclick="pnt(01,6)">C#6</button>
+    <button onclick="pnt(02,6)">D6</button>
+    <button onclick="pnt(03,6)">D#6</button>
+    <button onclick="pnt(04,6)">E6</button>
+    <button onclick="pnt(05,6)">F6</button>
+    <button onclick="pnt(06,6)">F#6</button>
+    <button onclick="pnt(07,6)">G6</button>
+    <button onclick="pnt(08,6)">G#6</button>
+    <button onclick="pnt(09,6)">A6</button>
+    <button onclick="pnt(10,6)">A#6</button>
+    <button onclick="pnt(11,6)">B6</button></br>
+    <button onclick="pnt(00,7)">C7</button>
+    <button onclick="pnt(01,7)">C#7</button>
+    <button onclick="pnt(02,7)">D7</button>
+    <button onclick="pnt(03,7)">D#7</button>
+    <button onclick="pnt(04,7)">E7</button>
+    <button onclick="pnt(05,7)">F7</button>
+    <button onclick="pnt(06,7)">F#7</button>
+    <button onclick="pnt(07,7)">G7</button>
+    <button onclick="pnt(08,7)">G#7</button>
+    <button onclick="pnt(09,7)">A7</button>
+    <button onclick="pnt(10,7)">A#7</button>
+    <button onclick="pnt(11,7)">B7</button></br>
+    <button onclick="pnt(00,8)">C8</button>
+    <button onclick="pnt(01,8)">C#8</button>
+    <button onclick="pnt(02,8)">D8</button>
+    <button onclick="pnt(03,8)">D#8</button>
+    <button onclick="pnt(04,8)">E8</button>
+    <button onclick="pnt(05,8)">F8</button>
+    <button onclick="pnt(06,8)">F#8</button>
+    <button onclick="pnt(07,8)">G8</button>
+    <button onclick="pnt(08,8)">G#8</button>
+    <button onclick="pnt(09,8)">A8</button>
+    <button onclick="pnt(10,8)">A#8</button>
+    <button onclick="pnt(11,8)">B8</button></br>
+    <button onclick="pnt(00,9)">C9</button>
+    <button onclick="pnt(01,9)">C#9</button>
+    <button onclick="pnt(02,9)">D9</button>
+    <button onclick="pnt(03,9)">D#9</button>
+    <button onclick="pnt(04,9)">E9</button>
+    <button onclick="pnt(05,9)">F9</button>
+    <button onclick="pnt(06,9)">F#9</button>
+    <button onclick="pnt(07,9)">G9</button>
+    <button onclick="pnt(08,9)">G#9</button>
+    <button onclick="pnt(09,9)">A9</button>
+    <button onclick="pnt(10,9)">A#9</button>
+    <button onclick="pnt(11,9)">B9</button></br>
+</div>
+<div id="keybroad.flat">
+    <button onclick="pnt(00,0)">C0</button>
+    <button onclick="pnt(01,0)">Db0</button>
+    <button onclick="pnt(02,0)">D0</button>
+    <button onclick="pnt(03,0)">Eb0</button>
+    <button onclick="pnt(04,0)">E0</button>
+    <button onclick="pnt(05,0)">F0</button>
+    <button onclick="pnt(06,0)">Gb0</button>
+    <button onclick="pnt(07,0)">G0</button>
+    <button onclick="pnt(08,0)">Ab0</button>
+    <button onclick="pnt(09,0)">A0</button>
+    <button onclick="pnt(10,0)">Bb0</button>
+    <button onclick="pnt(11,0)">B0</button></br>
+    <button onclick="pnt(00,1)">C1</button>
+    <button onclick="pnt(01,1)">Db1</button>
+    <button onclick="pnt(02,1)">D1</button>
+    <button onclick="pnt(03,1)">Eb1</button>
+    <button onclick="pnt(04,1)">E1</button>
+    <button onclick="pnt(05,1)">F1</button>
+    <button onclick="pnt(06,1)">Gb1</button>
+    <button onclick="pnt(07,1)">G1</button>
+    <button onclick="pnt(08,1)">Ab1</button>
+    <button onclick="pnt(09,1)">A1</button>
+    <button onclick="pnt(10,1)">Bb1</button>
+    <button onclick="pnt(11,1)">B1</button></br>
+    <button onclick="pnt(00,2)">C2</button>
+    <button onclick="pnt(01,2)">Db2</button>
+    <button onclick="pnt(02,2)">D2</button>
+    <button onclick="pnt(03,2)">Eb2</button>
+    <button onclick="pnt(04,2)">E2</button>
+    <button onclick="pnt(05,2)">F2</button>
+    <button onclick="pnt(06,2)">Gb2</button>
+    <button onclick="pnt(07,2)">G2</button>
+    <button onclick="pnt(08,2)">Ab2</button>
+    <button onclick="pnt(09,2)">A2</button>
+    <button onclick="pnt(10,2)">Bb2</button>
+    <button onclick="pnt(11,2)">B2</button></br>
+    <button onclick="pnt(00,3)">C3</button>
+    <button onclick="pnt(01,3)">Db3</button>
+    <button onclick="pnt(02,3)">D3</button>
+    <button onclick="pnt(03,3)">Eb3</button>
+    <button onclick="pnt(04,3)">E3</button>
+    <button onclick="pnt(05,3)">F3</button>
+    <button onclick="pnt(06,3)">Gb3</button>
+    <button onclick="pnt(07,3)">G3</button>
+    <button onclick="pnt(08,3)">Ab3</button>
+    <button onclick="pnt(09,3)">A3</button>
+    <button onclick="pnt(10,3)">Bb3</button>
+    <button onclick="pnt(11,3)">B3</button></br>
+    <button onclick="pnt(00,4)">C4</button>
+    <button onclick="pnt(01,4)">Db4</button>
+    <button onclick="pnt(02,4)">D4</button>
+    <button onclick="pnt(03,4)">Eb4</button>
+    <button onclick="pnt(04,4)">E4</button>
+    <button onclick="pnt(05,4)">F4</button>
+    <button onclick="pnt(06,4)">Gb4</button>
+    <button onclick="pnt(07,4)">G4</button>
+    <button onclick="pnt(08,4)">Ab4</button>
+    <button onclick="pnt(09,4)">A4</button>
+    <button onclick="pnt(10,4)">Bb4</button>
+    <button onclick="pnt(11,4)">B4</button></br>
+    <button onclick="pnt(00,5)">C5</button>
+    <button onclick="pnt(01,5)">Db5</button>
+    <button onclick="pnt(02,5)">D5</button>
+    <button onclick="pnt(03,5)">Eb5</button>
+    <button onclick="pnt(04,5)">E5</button>
+    <button onclick="pnt(05,5)">F5</button>
+    <button onclick="pnt(06,5)">Gb5</button>
+    <button onclick="pnt(07,5)">G5</button>
+    <button onclick="pnt(08,5)">Ab5</button>
+    <button onclick="pnt(09,5)">A5</button>
+    <button onclick="pnt(10,5)">Bb5</button>
+    <button onclick="pnt(11,5)">B5</button></br>
+    <button onclick="pnt(00,6)">C6</button>
+    <button onclick="pnt(01,6)">Db6</button>
+    <button onclick="pnt(02,6)">D6</button>
+    <button onclick="pnt(03,6)">Eb6</button>
+    <button onclick="pnt(04,6)">E6</button>
+    <button onclick="pnt(05,6)">F6</button>
+    <button onclick="pnt(06,6)">Gb6</button>
+    <button onclick="pnt(07,6)">G6</button>
+    <button onclick="pnt(08,6)">Ab6</button>
+    <button onclick="pnt(09,6)">A6</button>
+    <button onclick="pnt(10,6)">Bb6</button>
+    <button onclick="pnt(11,6)">B6</button></br>
+    <button onclick="pnt(00,7)">C7</button>
+    <button onclick="pnt(01,7)">Db7</button>
+    <button onclick="pnt(02,7)">D7</button>
+    <button onclick="pnt(03,7)">Eb7</button>
+    <button onclick="pnt(04,7)">E7</button>
+    <button onclick="pnt(05,7)">F7</button>
+    <button onclick="pnt(06,7)">Gb7</button>
+    <button onclick="pnt(07,7)">G7</button>
+    <button onclick="pnt(08,7)">Ab7</button>
+    <button onclick="pnt(09,7)">A7</button>
+    <button onclick="pnt(10,7)">Bb7</button>
+    <button onclick="pnt(11,7)">B7</button></br>
+    <button onclick="pnt(00,8)">C8</button>
+    <button onclick="pnt(01,8)">Db8</button>
+    <button onclick="pnt(02,8)">D8</button>
+    <button onclick="pnt(03,8)">Eb8</button>
+    <button onclick="pnt(04,8)">E8</button>
+    <button onclick="pnt(05,8)">F8</button>
+    <button onclick="pnt(06,8)">Gb8</button>
+    <button onclick="pnt(07,8)">G8</button>
+    <button onclick="pnt(08,8)">Ab8</button>
+    <button onclick="pnt(09,8)">A8</button>
+    <button onclick="pnt(10,8)">Bb8</button>
+    <button onclick="pnt(11,8)">B8</button></br>
+    <button onclick="pnt(00,9)">C9</button>
+    <button onclick="pnt(01,9)">Db9</button>
+    <button onclick="pnt(02,9)">D9</button>
+    <button onclick="pnt(03,9)">Eb9</button>
+    <button onclick="pnt(04,9)">E9</button>
+    <button onclick="pnt(05,9)">F9</button>
+    <button onclick="pnt(06,9)">Gb9</button>
+    <button onclick="pnt(07,9)">G9</button>
+    <button onclick="pnt(08,9)">Ab9</button>
+    <button onclick="pnt(09,9)">A9</button>
+    <button onclick="pnt(10,9)">Bb9</button>
+    <button onclick="pnt(11,9)">B9</button></br>
+</div>
+<div id="keybroad.no">
+    <button onclick="pnt(00,0)">C0</button>
+    <button onclick="pnt(01,0)">-0</button>
+    <button onclick="pnt(02,0)">D0</button>
+    <button onclick="pnt(03,0)">-0</button>
+    <button onclick="pnt(04,0)">E0</button>
+    <button onclick="pnt(05,0)">F0</button>
+    <button onclick="pnt(06,0)">-0</button>
+    <button onclick="pnt(07,0)">G0</button>
+    <button onclick="pnt(08,0)">-0</button>
+    <button onclick="pnt(09,0)">A0</button>
+    <button onclick="pnt(10,0)">-0</button>
+    <button onclick="pnt(11,0)">B0</button></br>
+    <button onclick="pnt(00,1)">C1</button>
+    <button onclick="pnt(01,1)">-1</button>
+    <button onclick="pnt(02,1)">D1</button>
+    <button onclick="pnt(03,1)">-1</button>
+    <button onclick="pnt(04,1)">E1</button>
+    <button onclick="pnt(05,1)">F1</button>
+    <button onclick="pnt(06,1)">-1</button>
+    <button onclick="pnt(07,1)">G1</button>
+    <button onclick="pnt(08,1)">-1</button>
+    <button onclick="pnt(09,1)">A1</button>
+    <button onclick="pnt(10,1)">-1</button>
+    <button onclick="pnt(11,1)">B1</button></br>
+    <button onclick="pnt(00,2)">C2</button>
+    <button onclick="pnt(01,2)">-2</button>
+    <button onclick="pnt(02,2)">D2</button>
+    <button onclick="pnt(03,2)">-2</button>
+    <button onclick="pnt(04,2)">E2</button>
+    <button onclick="pnt(05,2)">F2</button>
+    <button onclick="pnt(06,2)">-2</button>
+    <button onclick="pnt(07,2)">G2</button>
+    <button onclick="pnt(08,2)">-2</button>
+    <button onclick="pnt(09,2)">A2</button>
+    <button onclick="pnt(10,2)">-2</button>
+    <button onclick="pnt(11,2)">B2</button></br>
+    <button onclick="pnt(00,3)">C3</button>
+    <button onclick="pnt(01,3)">-3</button>
+    <button onclick="pnt(02,3)">D3</button>
+    <button onclick="pnt(03,3)">-3</button>
+    <button onclick="pnt(04,3)">E3</button>
+    <button onclick="pnt(05,3)">F3</button>
+    <button onclick="pnt(06,3)">-3</button>
+    <button onclick="pnt(07,3)">G3</button>
+    <button onclick="pnt(08,3)">-3</button>
+    <button onclick="pnt(09,3)">A3</button>
+    <button onclick="pnt(10,3)">-3</button>
+    <button onclick="pnt(11,3)">B3</button></br>
+    <button onclick="pnt(00,4)">C4</button>
+    <button onclick="pnt(01,4)">-4</button>
+    <button onclick="pnt(02,4)">D4</button>
+    <button onclick="pnt(03,4)">-4</button>
+    <button onclick="pnt(04,4)">E4</button>
+    <button onclick="pnt(05,4)">F4</button>
+    <button onclick="pnt(06,4)">-4</button>
+    <button onclick="pnt(07,4)">G4</button>
+    <button onclick="pnt(08,4)">-4</button>
+    <button onclick="pnt(09,4)">A4</button>
+    <button onclick="pnt(10,4)">-4</button>
+    <button onclick="pnt(11,4)">B4</button></br>
+    <button onclick="pnt(00,5)">C5</button>
+    <button onclick="pnt(01,5)">-5</button>
+    <button onclick="pnt(02,5)">D5</button>
+    <button onclick="pnt(03,5)">-5</button>
+    <button onclick="pnt(04,5)">E5</button>
+    <button onclick="pnt(05,5)">F5</button>
+    <button onclick="pnt(06,5)">-5</button>
+    <button onclick="pnt(07,5)">G5</button>
+    <button onclick="pnt(08,5)">-5</button>
+    <button onclick="pnt(09,5)">A5</button>
+    <button onclick="pnt(10,5)">-5</button>
+    <button onclick="pnt(11,5)">B5</button></br>
+    <button onclick="pnt(00,6)">C6</button>
+    <button onclick="pnt(01,6)">-6</button>
+    <button onclick="pnt(02,6)">D6</button>
+    <button onclick="pnt(03,6)">-6</button>
+    <button onclick="pnt(04,6)">E6</button>
+    <button onclick="pnt(05,6)">F6</button>
+    <button onclick="pnt(06,6)">-6</button>
+    <button onclick="pnt(07,6)">G6</button>
+    <button onclick="pnt(08,6)">-6</button>
+    <button onclick="pnt(09,6)">A6</button>
+    <button onclick="pnt(10,6)">-6</button>
+    <button onclick="pnt(11,6)">B6</button></br>
+    <button onclick="pnt(00,7)">C7</button>
+    <button onclick="pnt(01,7)">-7</button>
+    <button onclick="pnt(02,7)">D7</button>
+    <button onclick="pnt(03,7)">-7</button>
+    <button onclick="pnt(04,7)">E7</button>
+    <button onclick="pnt(05,7)">F7</button>
+    <button onclick="pnt(06,7)">-7</button>
+    <button onclick="pnt(07,7)">G7</button>
+    <button onclick="pnt(08,7)">-7</button>
+    <button onclick="pnt(09,7)">A7</button>
+    <button onclick="pnt(10,7)">-7</button>
+    <button onclick="pnt(11,7)">B7</button></br>
+    <button onclick="pnt(00,8)">C8</button>
+    <button onclick="pnt(01,8)">-8</button>
+    <button onclick="pnt(02,8)">D8</button>
+    <button onclick="pnt(03,8)">-8</button>
+    <button onclick="pnt(04,8)">E8</button>
+    <button onclick="pnt(05,8)">F8</button>
+    <button onclick="pnt(06,8)">-8</button>
+    <button onclick="pnt(07,8)">G8</button>
+    <button onclick="pnt(08,8)">-8</button>
+    <button onclick="pnt(09,8)">A8</button>
+    <button onclick="pnt(10,8)">-8</button>
+    <button onclick="pnt(11,8)">B8</button></br>
+    <button onclick="pnt(00,9)">C9</button>
+    <button onclick="pnt(01,9)">-9</button>
+    <button onclick="pnt(02,9)">D9</button>
+    <button onclick="pnt(03,9)">-9</button>
+    <button onclick="pnt(04,9)">E9</button>
+    <button onclick="pnt(05,9)">F9</button>
+    <button onclick="pnt(06,9)">-9</button>
+    <button onclick="pnt(07,9)">G9</button>
+    <button onclick="pnt(08,9)">-9</button>
+    <button onclick="pnt(09,9)">A9</button>
+    <button onclick="pnt(10,9)">-9</button>
+    <button onclick="pnt(11,9)">B9</button></br>
+</div>
+    <label style="font-size:20px">Tab the buttons to play the notes.Tab the word to change sound.</br>Text in the box to change time,fading and A4 note</label>
+</div>
+
+<div style="text-align: center;" id="pdial">
+    <label style="font-size:20px">Notes are sounded</label>
+    <button id="dial.sound" onclick="dial_sound()" class="btntype">square</button>
+    <label style="font-size:20px">with</label>
+    <input type="text" id="dial.time" class="input" size="1" placeholder="time" value="100">
+    <label style="font-size:20px">ms</label>
+<div id="no need to care">
+    <button class="btndial" onclick="dia(1,1)">1</button>
+    <button class="btndial" onclick="dia(1,2)">2</button>
+    <button class="btndial" onclick="dia(1,3)">3</button>
+    <button class="btndial" onclick="dia(1,4)">A</button></br>
+    <button class="btndial" onclick="dia(2,1)">4</button>
+    <button class="btndial" onclick="dia(2,2)">5</button>
+    <button class="btndial" onclick="dia(2,3)">6</button>
+    <button class="btndial" onclick="dia(2,4)">B</button></br>
+    <button class="btndial" onclick="dia(3,1)">7</button>
+    <button class="btndial" onclick="dia(3,2)">8</button>
+    <button class="btndial" onclick="dia(3,3)">9</button>
+    <button class="btndial" onclick="dia(3,4)">C</button></br>
+    <button class="btndial" onclick="dia(4,1)">*</button>
+    <button class="btndial" onclick="dia(4,2)">0</button>
+    <button class="btndial" onclick="dia(4,3)">#</button>
+    <button class="btndial" onclick="dia(4,4)">D</button></br>
+    <button class="btndial" onclick="dia(0,0)">_</button>
+    <button class="btndial" onclick="dia(5,0)">"</button>
+    <button class="btndial" onclick="dia(5,5)">-</button>
+    <button class="btndial" disabled          >󠀠 󠀠 </button ></br>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div style="text-align: center;" id="game">
+    <button class=btngamew onclick="showhide1()">Return</button></br>
+    <u><label id=gamemodebar style="font-size:30"></label></u>
+
+    <div id="Memory">
+        <label id=MemNum1 style="font-size:30">Alive </label>
+        <label style="font-size:30">: </label> 
+        <label id=MemNumH style="font-size:30">0</label>
+        <label style="font-size:30">, </label>
+        <label id=MemNum2 style="font-size:30">Total</label>
+        <label style="font-size:30">: </label>
+        <label id=MemNumT style="font-size:30">0</label>
+        <label style="font-size:30">, </label>
+        <label id=MemNum3 style="font-size:30">Mistake</label>
+        <label style="font-size:30">: </label> 
+        <label id=MemNumM style="font-size:30">0</label>
+        <label style="font-size:30">, </label>
+        <label id=MemNum4 style="font-size:30">HighScore</label>
+        <label style="font-size:30">: </label> 
+        <label id=MemNumS style="font-size:30">0</label>
+
+        <div id =MemNumBtn class="cross">
+    <button class="squ0" id="mq00"onclick="mqbtn(00)">@</button>
+    <button class="squ0" id="mq01"onclick="mqbtn(01)">@</button>
+    <button class="squ0" id="mq02"onclick="mqbtn(02)">@</button>
+    <button class="squ0" id="mq03"onclick="mqbtn(03)">@</button>
+    <button class="squ0" id="mq04"onclick="mqbtn(04)">@</button>
+    <button class="squ0" id="mq05"onclick="mqbtn(05)">@</button>
+    <button class="squ0" id="mq06"onclick="mqbtn(06)">@</button>
+    <button class="squ0" id="mq07"onclick="mqbtn(07)">@</button>
+    <button class="squ0" id="mq08"onclick="mqbtn(08)">@</button>
+    <button class="squ0" id="mq09"onclick="mqbtn(09)">@</button></br>
+    <button class="squ0" id="mq10"onclick="mqbtn(10)">@</button>
+    <button class="squ0" id="mq11"onclick="mqbtn(11)">@</button>
+    <button class="squ0" id="mq12"onclick="mqbtn(12)">@</button>
+    <button class="squ0" id="mq13"onclick="mqbtn(13)">@</button>
+    <button class="squ0" id="mq14"onclick="mqbtn(14)">@</button>
+    <button class="squ0" id="mq15"onclick="mqbtn(15)">@</button>
+    <button class="squ0" id="mq16"onclick="mqbtn(16)">@</button>
+    <button class="squ0" id="mq17"onclick="mqbtn(17)">@</button>
+    <button class="squ0" id="mq18"onclick="mqbtn(18)">@</button>
+    <button class="squ0" id="mq19"onclick="mqbtn(19)">@</button></br>
+    <button class="squ0" id="mq20"onclick="mqbtn(20)">@</button>
+    <button class="squ0" id="mq21"onclick="mqbtn(21)">@</button>
+    <button class="squ0" id="mq22"onclick="mqbtn(22)">@</button>
+    <button class="squ0" id="mq23"onclick="mqbtn(23)">@</button>
+    <button class="squ0" id="mq24"onclick="mqbtn(24)">@</button>
+    <button class="squ0" id="mq25"onclick="mqbtn(25)">@</button>
+    <button class="squ0" id="mq26"onclick="mqbtn(26)">@</button>
+    <button class="squ0" id="mq27"onclick="mqbtn(27)">@</button>
+    <button class="squ0" id="mq28"onclick="mqbtn(28)">@</button>
+    <button class="squ0" id="mq29"onclick="mqbtn(29)">@</button></br>
+    <button class="squ0" id="mq30"onclick="mqbtn(30)">@</button>
+    <button class="squ0" id="mq31"onclick="mqbtn(31)">@</button>
+    <button class="squ0" id="mq32"onclick="mqbtn(32)">@</button>
+    <button class="squ0" id="mq33"onclick="mqbtn(33)">@</button>
+    <button class="squ0" id="mq34"onclick="mqbtn(34)">@</button>
+    <button class="squ0" id="mq35"onclick="mqbtn(35)">@</button>
+    <button class="squ0" id="mq36"onclick="mqbtn(36)">@</button>
+    <button class="squ0" id="mq37"onclick="mqbtn(37)">@</button>
+    <button class="squ0" id="mq38"onclick="mqbtn(38)">@</button>
+    <button class="squ0" id="mq39"onclick="mqbtn(39)">@</button></br>
+    <button class="squ0" id="mq40"onclick="mqbtn(40)">@</button>
+    <button class="squ0" id="mq41"onclick="mqbtn(41)">@</button>
+    <button class="squ0" id="mq42"onclick="mqbtn(42)">@</button>
+    <button class="squ0" id="mq43"onclick="mqbtn(43)">@</button>
+    <button class="squ0" id="mq44"onclick="mqbtn(44)">@</button>
+    <button class="squ0" id="mq45"onclick="mqbtn(45)">@</button>
+    <button class="squ0" id="mq46"onclick="mqbtn(46)">@</button>
+    <button class="squ0" id="mq47"onclick="mqbtn(47)">@</button>
+    <button class="squ0" id="mq48"onclick="mqbtn(48)">@</button>
+    <button class="squ0" id="mq49"onclick="mqbtn(49)">@</button></br>
+    <button class="squ0" id="mq50"onclick="mqbtn(50)">@</button>
+    <button class="squ0" id="mq51"onclick="mqbtn(51)">@</button>
+    <button class="squ0" id="mq52"onclick="mqbtn(52)">@</button>
+    <button class="squ0" id="mq53"onclick="mqbtn(53)">@</button>
+    <button class="squ0" id="mq54"onclick="mqbtn(54)">@</button>
+    <button class="squ0" id="mq55"onclick="mqbtn(55)">@</button>
+    <button class="squ0" id="mq56"onclick="mqbtn(56)">@</button>
+    <button class="squ0" id="mq57"onclick="mqbtn(57)">@</button>
+    <button class="squ0" id="mq58"onclick="mqbtn(58)">@</button>
+    <button class="squ0" id="mq59"onclick="mqbtn(59)">@</button></br>
+    <button class="squ0" id="mq60"onclick="mqbtn(60)">@</button>
+    <button class="squ0" id="mq61"onclick="mqbtn(61)">@</button>
+    <button class="squ0" id="mq62"onclick="mqbtn(62)">@</button>
+    <button class="squ0" id="mq63"onclick="mqbtn(63)">@</button>
+    <button class="squ0" id="mq64"onclick="mqbtn(64)">@</button>
+    <button class="squ0" id="mq65"onclick="mqbtn(65)">@</button>
+    <button class="squ0" id="mq66"onclick="mqbtn(66)">@</button>
+    <button class="squ0" id="mq67"onclick="mqbtn(67)">@</button>
+    <button class="squ0" id="mq68"onclick="mqbtn(68)">@</button>
+    <button class="squ0" id="mq69"onclick="mqbtn(69)">@</button></br>
+    <button class="squ0" id="mq70"onclick="mqbtn(70)">@</button>
+    <button class="squ0" id="mq71"onclick="mqbtn(71)">@</button>
+    <button class="squ0" id="mq72"onclick="mqbtn(72)">@</button>
+    <button class="squ0" id="mq73"onclick="mqbtn(73)">@</button>
+    <button class="squ0" id="mq74"onclick="mqbtn(74)">@</button>
+    <button class="squ0" id="mq75"onclick="mqbtn(75)">@</button>
+    <button class="squ0" id="mq76"onclick="mqbtn(76)">@</button>
+    <button class="squ0" id="mq77"onclick="mqbtn(77)">@</button>
+    <button class="squ0" id="mq78"onclick="mqbtn(78)">@</button>
+    <button class="squ0" id="mq79"onclick="mqbtn(79)">@</button></br>
+    <button class="squ0" id="mq80"onclick="mqbtn(80)">@</button>
+    <button class="squ0" id="mq81"onclick="mqbtn(81)">@</button>
+    <button class="squ0" id="mq82"onclick="mqbtn(82)">@</button>
+    <button class="squ0" id="mq83"onclick="mqbtn(83)">@</button>
+    <button class="squ0" id="mq84"onclick="mqbtn(84)">@</button>
+    <button class="squ0" id="mq85"onclick="mqbtn(85)">@</button>
+    <button class="squ0" id="mq86"onclick="mqbtn(86)">@</button>
+    <button class="squ0" id="mq87"onclick="mqbtn(87)">@</button>
+    <button class="squ0" id="mq88"onclick="mqbtn(88)">@</button>
+    <button class="squ0" id="mq89"onclick="mqbtn(89)">@</button></br>
+    <button class="squ0" id="mq90"onclick="mqbtn(90)">@</button>
+    <button class="squ0" id="mq91"onclick="mqbtn(91)">@</button>
+    <button class="squ0" id="mq92"onclick="mqbtn(92)">@</button>
+    <button class="squ0" id="mq93"onclick="mqbtn(93)">@</button>
+    <button class="squ0" id="mq94"onclick="mqbtn(94)">@</button>
+    <button class="squ0" id="mq95"onclick="mqbtn(95)">@</button>
+    <button class="squ0" id="mq96"onclick="mqbtn(96)">@</button>
+    <button class="squ0" id="mq97"onclick="mqbtn(97)">@</button>
+    <button class="squ0" id="mq98"onclick="mqbtn(98)">@</button>
+    <button class="squ0" id="mq99"onclick="mqbtn(99)">@</button></br>
+        </div>
+    </div>
+</div>
+    
+<div style="text-align: center;" id="gamepop" class="popup">
+    <div class="popup-content"><span class="close">&times;</span>
+<div style="text-align: center;">
+    <label style="color: #000000; font-size:20">Select Gamemode</label></br>
+    <button onclick='gmode(0)'class='g0'id=m0>m0</button><button onclick='gmode(1)'class='g0'id=m1>m1</button>
+    <button onclick='gmode(2)'class='g0'id=m2>m2</button><button onclick='gmode(3)'class='g0'id=m3>m3</button>
+    <button onclick='gmode(4)'class='g0'id=m4>m4</button><button onclick='gmode(5)'class='g0'id=m5>m5</button>
+</br>
+    <button onclick="playgame()"class=btnplay style="font-size: 20px;">Go</button>
+</div></div>
+</div>
+
+<script type="text/javascript">
+//Set ups - data
+var data = {"zoom":1.9,"page":0,"tone":{"type":0,"hz":440},
+"keybroad":{"type":0,"time":100,"a4":440,"fade":1,"display":0},"dial":{"type":0,"time":100}}
+var states = {}
+var context = new AudioContext()
+
+setCookie("canuse","true",10)
+//alert(getCookie("var1"))
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];while (c.charAt(0) == ' ') {c = c.substring(1);}
+    if (c.indexOf(name) == 0) {return c.substring(name.length, c.length);}
+}return "";}
+console.log(getCookie("canuse")=="yes")
+lol = new Function("setTimeout(function(){yes();},6600)")
+localStorage.setItem("canuse","yes")
+console.log(localStorage.getItem("canuse")=="yes")
+
+//Game pages
+function showhide1(element){
+var sw1page = ["menu","game"]
+for(let i in sw1page){
+document.getElementById(sw1page[i]).style.display = "none";}
+switch(typeof(element)){
+case"undefined":document.getElementById("menu").style.display = "block";break;
+case"string":document.getElementById(element).style.display = "block";break;
+case"number":document.getElementById(sw1page[element]).style.display = "block";break;
+}}showhide1();
+function showhide2(element){
+var sw2page=["index","phz","ctt"]
+for(let x in sw2page){document.getElementById(sw2page[x]).style.display = "none";}
+switch(typeof(element)){
+case"undefined":document.getElementById("index").style.display = "block";break;
+case"string":document.getElementById(element).style.display = "block";break;
+case"number":document.getElementById(sw2page[element]).style.display = "block";
+}}showhide2();
+function showhidephz(element){
+var sw2page=["pindex","ptone","pkeybroad","pdial"]
+for(let x in sw2page){document.getElementById(sw2page[x]).style.display = "none";}
+switch(typeof(element)){
+case"undefined":document.getElementById("pindex").style.display = "block";break;
+case"string":document.getElementById(element).style.display = "block";break;
+case"number":document.getElementById(sw2page[element]).style.display = "block";
+}}showhidephz()
+//Playhz
+var tone_type_name=["sine","square","triangle","sawtooth"]
+document.getElementById("tone.hz").value= data.tone.hz;
+document.getElementById("tone.sound").innerText = tone_type_name[data.tone.type];
+
+function toneplay(){
+data.tone.hz=parseFloat(document.getElementById("tone.hz").value);
+var o = context.createOscillator()
+var g = context.createGain()
+o.connect(g)
+g.connect(context.destination)
+o.type = document.getElementById("tone.sound").innerText
+o.frequency.value = document.getElementById("tone.hz").value
+o.start(0)
+}
+function tone_sound(){
+    data.tone.type +=1;data.tone.type %= 4
+    document.getElementById("tone.sound").innerText = tone_type_name[data.tone.type];
+    }
+//Keybroad
+var key_type_name = ["#","b","-"]
+document.getElementById("keybrd.time").value = data.keybroad.time;
+document.getElementById("keybrd.a4").value = data.keybroad.a4; 
+document.getElementById("keybrd.sound").innerText = tone_type_name[data.keybroad.type];
+document.getElementById("keybrd.fade").value = data.keybroad.fade;
+document.getElementById("keybrd.dp").innerText = key_type_name[data.keybroad.display];
+
+function keybrd_type(element){
+    var keybrdtype=["keybroad.shap","keybroad.flat","keybroad.no"]
+    document.getElementById("keybroad.no").style.display = "none";
+    document.getElementById("keybroad.shap").style.display = "none";
+    document.getElementById("keybroad.flat").style.display = "none";
+    document.getElementById(keybrdtype[element]).style.display = "block";
+    data.keybroad.display = element;}
+keybrd_type(data.keybroad.display);
+function keybrd_sound(){
+    data.keybroad.type +=1;data.keybroad.type %= 4
+    data.keybroad.time = document.getElementById("keybrd.time").value;
+    data.keybroad.a4 = document.getElementById("keybrd.a4").value;
+    data.keybroad.fade = document.getElementById("keybrd.fade").value;
+    document.getElementById("keybrd.sound").innerText = tone_type_name[data.keybroad.type];
+    
+}
+function keybrd_dp(){
+    data.keybroad.display +=1;data.keybroad.display %= 3
+    data.keybroad.time = document.getElementById("keybrd.time").value;
+    data.keybroad.a4 = document.getElementById("keybrd.a4").value;
+    data.keybroad.fade = document.getElementById("keybrd.fade").value;
+    document.getElementById("keybrd.dp").innerText = key_type_name[data.keybroad.display];
+    keybrd_type(data.keybroad.display);
+}
+function pnt(ptch,octv){
+    data.keybroad.time = parseFloat(document.getElementById("keybrd.time").value);
+    data.keybroad.a4 = parseFloat(document.getElementById("keybrd.a4").value);
+    data.keybroad.fade = parseFloat(document.getElementById("keybrd.fade").value);
+    document.getElementById("keybrd.sound").innerText = tone_type_name[data.keybroad.type];
+    
+var o = context.createOscillator()
+var g = context.createGain()
+o.connect(g)
+g.connect(context.destination)
+o.type = tone_type_name[data.keybroad.type]
+o.frequency.value = data.keybroad.a4*(2**(octv-4+((ptch-9)/12)))
+o.start(0)
+setTimeout(function(){g.gain.exponentialRampToValueAtTime(
+0.0000001, context.currentTime + data.keybroad.fade)},
+document.getElementById("keybrd.time").value)}
+document.getElementById("dial.time").value = data.dial.time;
+document.getElementById("dial.sound").innerText = tone_type_name[data.dial.type];
+
+function dial_sound(){
+    data.dial.type +=1;data.dial.type %= 4
+    data.dial.time = parseFloat(document.getElementById("dial.time").value);
+    document.getElementById("dial.sound").innerText = tone_type_name[data.dial.type];
+    
+} 
+function dia(d1,d2){
+    data.dial.time = parseFloat(document.getElementById("dial.time").value);
+    document.getElementById("dial.sound").innerText = tone_type_name[data.dial.type];
+    var dia1=[350,697 ,770, 852, 941, 480]
+    var dia2=[440,1209,1336,1477,1633,620]
+    playhz(dia1[d1],data.dial.type,data.dial.time,0);playhz(dia2[d2],data.dial.type,data.dial.time,0);
+}
+function playhz(tnhz,type,time,stop){
+var o = context.createOscillator()
+var g = context.createGain()
+o.connect(g)
+g.connect(context.destination)
+o.type = tone_type_name[type]
+o.frequency.value = tnhz
+o.start(0)
+setTimeout(function(){g.gain.exponentialRampToValueAtTime(
+0.0000001, context.currentTime + stop)},time)}
+
+
+//Gamemode
+var gameplay = {mode:0,game:0}
+function gme(gm){
+    document.getElementById("gamepop").style.display = "block";
+    gameplay.game=gm
+    gameplay.mode=0
+    let gamemode=[
+    ["+-","x","+-x"],
+    ["2-16","16-2","2-10","16-10","10-2","10-6"],
+    ["Simple","Complex"],
+    ["5 Each","8 Each","10 Each","<Alphabet>","<Full>"],
+    ["3 Each","4 Each","5 Each"],
+    ["Numbers","Alphabet"],
+    ["Freemode"],
+    ["0.5 min","1 min","2 min","5 min","10 min"],
+    ["Speedrun"]
+]   
+for(i=0;i<=5;i++){
+    document.getElementById("m"+i).style.display = "none";
+    document.getElementById("m"+i).className = "g0";
+    if(gamemode[gm][i]){document.getElementById("m"+i).style.display = "inline";
+    document.getElementById("m"+i).innerText = gamemode[gm][i];}
+}
+document.getElementById("m0").className = "g1";
+}
+function gmode(md){
+    gameplay.mode = md
+    for(i=0;i<=5;i++){
+    document.getElementById("m"+i).className = "g0";}
+    document.getElementById("m"+md).className = "g1";
+}
+document.getElementsByClassName("close")[0].onclick = function() {
+    document.getElementById("gamepop").style.display = "none";}
+//Play ctt game
+var Mem = {}
+function mqrd(){};function mqmiss(){};function mqbtn(){};function mqrda(){}
+function shuffleArray(array){for (let i = array.length - 1; i > 0; i--)
+    {const j = Math.floor(Math.random() * (i + 1)); 
+    [array[i], array[j]] = [array[j], array[i]];}}aa
+
+function playgame(){document.getElementById("gamepop").style.display = "none";
+let gamename=[
+    "Logic Maths ",
+    "Logic Bases translate ",
+    "Logic Gates ",
+    "Memory Train with ",
+    "Memory Infinity with ",
+    "Memory Rise of ",
+    "Critictask : ",
+    "Critictask : ",
+    "Critictask : "
+]
+let gamemode=[
+    ["Addition and Subtraction","Mutiplycation","Addition, Subtraction, Mutiplycation"],
+    ["Bin to Hex","Hex to Bin","Bin to Dec","Hex to Dec","Dec to Bin","Dec to Hex"],
+    ["Simple","Complex"],
+    ["5 each round","8 each round","10 each round","26 Alphabet","100-All on"],
+    ["3 each round","4 each round","5 each round"],
+    ["Numbers","Alphabet"],
+    ["Freeplay"],
+    ["30 secound","1 minute","2 minute","5 minute","10 minute"],
+    ["Speedrun"]
+]   
+document.getElementById("gamemodebar").innerText = gamename[gameplay.game]+gamemode[gameplay.game][gameplay.mode]
+
+switch(gameplay.game){default:alert('Playing Game '+gamename[gameplay.game]+gamemode[gameplay.game][gameplay.mode]);break;
+case 3:showhide1(1);
+Mem.miss = 0
+Mem.place=0
+Mem.each=5
+Mem.org=[
+"mq00","mq01","mq02","mq03","mq04","mq05","mq06","mq07","mq08","mq09",
+"mq10","mq11","mq12","mq13","mq14","mq15","mq16","mq17","mq18","mq19",
+"mq20","mq21","mq22","mq23","mq24","mq25","mq26","mq27","mq28","mq29",
+"mq30","mq31","mq32","mq33","mq34","mq35","mq36","mq37","mq38","mq39",
+"mq40","mq41","mq42","mq43","mq44","mq45","mq46","mq47","mq48","mq49",
+"mq50","mq51","mq52","mq53","mq54","mq55","mq56","mq57","mq58","mq59",
+"mq60","mq61","mq62","mq63","mq64","mq65","mq66","mq67","mq68","mq69",
+"mq70","mq71","mq72","mq73","mq74","mq75","mq76","mq77","mq78","mq79",
+"mq80","mq81","mq82","mq83","mq84","mq85","mq86","mq87","mq88","mq89",
+"mq90","mq91","mq92","mq93","mq94","mq95","mq96","mq97","mq98","mq99"]
+Mem.btn=[
+"mq00","mq01","mq02","mq03","mq04","mq05","mq06","mq07","mq08","mq09",
+"mq10","mq11","mq12","mq13","mq14","mq15","mq16","mq17","mq18","mq19",
+"mq20","mq21","mq22","mq23","mq24","mq25","mq26","mq27","mq28","mq29",
+"mq30","mq31","mq32","mq33","mq34","mq35","mq36","mq37","mq38","mq39",
+"mq40","mq41","mq42","mq43","mq44","mq45","mq46","mq47","mq48","mq49",
+"mq50","mq51","mq52","mq53","mq54","mq55","mq56","mq57","mq58","mq59",
+"mq60","mq61","mq62","mq63","mq64","mq65","mq66","mq67","mq68","mq69",
+"mq70","mq71","mq72","mq73","mq74","mq75","mq76","mq77","mq78","mq79",
+"mq80","mq81","mq82","mq83","mq84","mq85","mq86","mq87","mq88","mq89",
+"mq90","mq91","mq92","mq93","mq94","mq95","mq96","mq97","mq98","mq99"]
+for(i=0;i<100;i++){
+    document.getElementById(Mem.btn[i]).className = "squ0";
+        document.getElementById("MemNumM").innerText = Mem.miss;
+        document.getElementById("MemNumH").innerText = Mem.place;
+        document.getElementById("MemNumT").innerText = Mem.place;
+
+}
+function each(){switch(gameplay.mode)
+{case 0:return(5);break;case 1:return(8);break;case 2:return(10);break;case 3:return(26);break;case 4:return(100);break;}}
+Mem.each = each()
+function mqrd(){
+shuffleArray(Mem.btn);Mem.place=0
+for(i=0;i<Mem.each;i++){
+let alphabet =["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+    document.getElementById(Mem.btn[i]).innerText = i+1
+    if(Mem.each==26){document.getElementById(Mem.btn[i]).innerText = alphabet[i]}
+    document.getElementById(Mem.btn[i]).className = "squ2"
+}
+mqbtn = function(btn){
+if (document.getElementById(Mem.org[btn]).className !=="squ0"){
+if(Mem.org[btn]!==Mem.btn[Mem.place]){mqmiss(btn);Mem.miss++;
+    document.getElementById("MemNumM").innerText++}
+else{
+Mem.place++
+document.getElementById("MemNumT").innerText++
+if(!Mem.miss){document.getElementById("MemNumH").innerText++}
+for(i=Mem.place;i<Mem.each;i++){
+    document.getElementById(Mem.btn[i]).innerText = "@"
+    document.getElementById(Mem.btn[i]).className = "squ1"}
+    document.getElementById(Mem.btn[Mem.place-1]).className = "squ0"}
+if (Mem.place==Mem.each){mqrd()}
+}
+}
+
+}
+mqrd();
+mqmiss = function(btn){
+for(i=0;i<3;i++){
+    setTimeout(() => {
+    document.getElementById(Mem.org[btn]).className = "squ3"
+    setTimeout(() => {
+    document.getElementById(Mem.org[btn]).className = "squ1"
+    }, 50*2);
+    }, i * 100 *2);
+
+}
+}
+
+break;
+case 4:showhide1(1);
+Mem.miss = 0
+Mem.place=0
+Mem.each=gameplay.mode+3
+Mem.org=[
+"mq00","mq01","mq02","mq03","mq04","mq05","mq06","mq07","mq08","mq09",
+"mq10","mq11","mq12","mq13","mq14","mq15","mq16","mq17","mq18","mq19",
+"mq20","mq21","mq22","mq23","mq24","mq25","mq26","mq27","mq28","mq29",
+"mq30","mq31","mq32","mq33","mq34","mq35","mq36","mq37","mq38","mq39",
+"mq40","mq41","mq42","mq43","mq44","mq45","mq46","mq47","mq48","mq49",
+"mq50","mq51","mq52","mq53","mq54","mq55","mq56","mq57","mq58","mq59",
+"mq60","mq61","mq62","mq63","mq64","mq65","mq66","mq67","mq68","mq69",
+"mq70","mq71","mq72","mq73","mq74","mq75","mq76","mq77","mq78","mq79",
+"mq80","mq81","mq82","mq83","mq84","mq85","mq86","mq87","mq88","mq89",
+"mq90","mq91","mq92","mq93","mq94","mq95","mq96","mq97","mq98","mq99"]
+Mem.btn=[
+"mq00","mq01","mq02","mq03","mq04","mq05","mq06","mq07","mq08","mq09",
+"mq10","mq11","mq12","mq13","mq14","mq15","mq16","mq17","mq18","mq19",
+"mq20","mq21","mq22","mq23","mq24","mq25","mq26","mq27","mq28","mq29",
+"mq30","mq31","mq32","mq33","mq34","mq35","mq36","mq37","mq38","mq39",
+"mq40","mq41","mq42","mq43","mq44","mq45","mq46","mq47","mq48","mq49",
+"mq50","mq51","mq52","mq53","mq54","mq55","mq56","mq57","mq58","mq59",
+"mq60","mq61","mq62","mq63","mq64","mq65","mq66","mq67","mq68","mq69",
+"mq70","mq71","mq72","mq73","mq74","mq75","mq76","mq77","mq78","mq79",
+"mq80","mq81","mq82","mq83","mq84","mq85","mq86","mq87","mq88","mq89",
+"mq90","mq91","mq92","mq93","mq94","mq95","mq96","mq97","mq98","mq99"]
+shuffleArray(Mem.btn);
+for(i=0;i<100;i++){
+    document.getElementById(Mem.btn[i]).className = "squ0";
+        document.getElementById("MemNumM").innerText = Mem.miss;
+        document.getElementById("MemNumH").innerText = Mem.place;
+        document.getElementById("MemNumT").innerText = Mem.place;
+
+}
+for(i=0;i<Mem.each;i++){
+    document.getElementById(Mem.btn[i]).innerText = i+1
+    document.getElementById(Mem.btn[i]).className = "squ2"
+}
+mqmiss = function(btn){
+for(i=0;i<3;i++){
+    setTimeout(() => {
+    document.getElementById(Mem.org[btn]).className = "squ3"
+    setTimeout(() => {
+    document.getElementById(Mem.org[btn]).className = "squ1"
+    }, 50*2);
+    }, i * 100 *2);
+
+}
+}
+mqbtn = function(btn){
+if (document.getElementById(Mem.org[btn]).className !=="squ0"){
+if(Mem.org[btn]!==Mem.btn[Mem.place]){mqmiss(btn);Mem.miss++;
+    document.getElementById("MemNumM").innerText = Mem.miss}
+else{
+Mem.place++
+document.getElementById("MemNumT").innerText = Mem.place
+if(!Mem.miss){document.getElementById("MemNumH").innerText = Mem.place}
+document.getElementById(Mem.btn[Mem.place-1]).className = "squ0"
+for(i=Mem.place;i<Mem.each+Mem.place;i++){
+    document.getElementById(Mem.btn[i]).innerText = "@"
+    document.getElementById(Mem.btn[i]).className = "squ1"}
+}}
+}
+break;
+case 5:showhide1(1);
+Mem.miss = 0
+Mem.place=0
+Mem.each=5
+Mem.org=[
+"mq00","mq01","mq02","mq03","mq04","mq05","mq06","mq07","mq08","mq09",
+"mq10","mq11","mq12","mq13","mq14","mq15","mq16","mq17","mq18","mq19",
+"mq20","mq21","mq22","mq23","mq24","mq25","mq26","mq27","mq28","mq29",
+"mq30","mq31","mq32","mq33","mq34","mq35","mq36","mq37","mq38","mq39",
+"mq40","mq41","mq42","mq43","mq44","mq45","mq46","mq47","mq48","mq49",
+"mq50","mq51","mq52","mq53","mq54","mq55","mq56","mq57","mq58","mq59",
+"mq60","mq61","mq62","mq63","mq64","mq65","mq66","mq67","mq68","mq69",
+"mq70","mq71","mq72","mq73","mq74","mq75","mq76","mq77","mq78","mq79",
+"mq80","mq81","mq82","mq83","mq84","mq85","mq86","mq87","mq88","mq89",
+"mq90","mq91","mq92","mq93","mq94","mq95","mq96","mq97","mq98","mq99"]
+Mem.btn=[
+"mq00","mq01","mq02","mq03","mq04","mq05","mq06","mq07","mq08","mq09",
+"mq10","mq11","mq12","mq13","mq14","mq15","mq16","mq17","mq18","mq19",
+"mq20","mq21","mq22","mq23","mq24","mq25","mq26","mq27","mq28","mq29",
+"mq30","mq31","mq32","mq33","mq34","mq35","mq36","mq37","mq38","mq39",
+"mq40","mq41","mq42","mq43","mq44","mq45","mq46","mq47","mq48","mq49",
+"mq50","mq51","mq52","mq53","mq54","mq55","mq56","mq57","mq58","mq59",
+"mq60","mq61","mq62","mq63","mq64","mq65","mq66","mq67","mq68","mq69",
+"mq70","mq71","mq72","mq73","mq74","mq75","mq76","mq77","mq78","mq79",
+"mq80","mq81","mq82","mq83","mq84","mq85","mq86","mq87","mq88","mq89",
+"mq90","mq91","mq92","mq93","mq94","mq95","mq96","mq97","mq98","mq99"]
+for(i=0;i<100;i++){
+    document.getElementById(Mem.btn[i]).className = "squ0";
+        document.getElementById("MemNumM").innerText = Mem.miss;
+        document.getElementById("MemNumH").innerText = Mem.place;
+        document.getElementById("MemNumT").innerText = Mem.place;
+
+}
+Mem.each = 5
+function mqrda(){
+shuffleArray(Mem.btn);Mem.place=0
+
+for(i=0;i<Mem.each;i++){
+    let alphabet =["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+    document.getElementById(Mem.btn[i]).innerText = i+1
+    if(gameplay.mode==1){document.getElementById(Mem.btn[i]).innerText = alphabet[i]}
+    document.getElementById(Mem.btn[i]).className = "squ2"
+}
+mqbtn = function(btn){
+if (document.getElementById(Mem.org[btn]).className !=="squ0"){
+if(Mem.org[btn]!==Mem.btn[Mem.place]){mqmiss(btn);Mem.miss++;
+    document.getElementById("MemNumM").innerText++}
+else{
+Mem.place++
+document.getElementById("MemNumT").innerText++
+if(!Mem.miss){document.getElementById("MemNumH").innerText++}
+for(i=Mem.place;i<Mem.each;i++){
+    document.getElementById(Mem.btn[i]).innerText = "@"
+    document.getElementById(Mem.btn[i]).className = "squ1"}
+    document.getElementById(Mem.btn[Mem.place-1]).className = "squ0"}
+if (Mem.place==Mem.each){Mem.each++;mqrda()}
+}
+}
+
+}
+mqrda();
+mqmiss = function(btn){
+for(i=0;i<3;i++){
+    setTimeout(() => {
+    document.getElementById(Mem.org[btn]).className = "squ3"
+    setTimeout(() => {
+    document.getElementById(Mem.org[btn]).className = "squ1"
+    }, 50*2);
+    }, i * 100 *2);
+
+}
+}
+break;
+
+}
+}
+//Reload
+function getUrlVars(){var vars = {};
+  var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value){vars[key] = value;});
+  return vars;
+}
+if (typeof(getUrlVars()["sh1"]) !== 'undefined'){switch(getUrlVars()["sh1"]){
+    case"0":case"menu":showhide1("menu");break;
+    case"1":case"game":showhide1("game");break;
+}}
+
+//Read Keybroad
+document.addEventListener("keydown", function (e) {
+    key_all(e.key);
+    switch(e.key){
+    case "ArrowLeft":key_al();break;
+    case "ArrowRight":key_ar();break;
+    case "F5":key_f5();break;
+    case "Backspace":key_bs();break;
+    case " ":key_space();break;
+    case "Enter":key_enter();break;
+    case "+":key_add();break;
+    case "-":key_sub();break;
+    case "0":case"1":case"2":case"3":case"4":case"5":case"6":case"7":case"8":case"9":key_nums(e.key);break;
+    case 'a':case 'b':case 'c':case 'd':case 'e':case 'f':case 'g':case 'h':case 'i':
+    case 'j':case 'k':case 'l':case 'm':case 'n':case 'o':case 'p':case 'q':case 'r':
+    case 's':case 't':case 'u':case 'v':case 'w':case 'x':case 'y':case 'z':key_abc(e.key);break;
+    };
+});
+//keys
+function key_al(){
+    showhide2((data.page+page2.length-1)%page2.length)
+}
+function key_ar(){
+    showhide2((data.page+1)%page2.length)
+
+}
+function key_f5(){window.location.reload()
+}
+function key_bs(){
+    if(document.getElementById("ptone").style.display == "block"){
+    data.tone.hz= (data.tone.hz - (data.tone.hz % 10))/10
+    document.getElementById("tone.hz").value=data.tone.hz;
+    }
+}
+function key_space(){
+}
+function key_enter(){
+}
+function key_add(){
+    if(document.getElementById("ptone").style.display == "block"){toneplay()}
+
+}
+function key_sub(){
+    if(document.getElementById("ptone").style.display == "block"){tone_sound()}
+
+}
+function key_nums(num){
+    if(document.getElementById("ptone").style.display == "block"){
+    data.tone.hz= (data.tone.hz * 10)+ parseInt(num)
+    document.getElementById("tone.hz").value=data.tone.hz}
+}
+function key_abc(abc){
+    if(abc==""){key_space()}
+}
+function key_all(key){
+}
+</script>
+</body>

@@ -1,0 +1,116 @@
+<div id="HomePage" style="padding: 20px;background-color:#dddddd;">
+  <label style="padding-left:20px;font-size:40px;">Welcome CCIB Sydent's Website</br></p>
+  <p style="padding-left:20px;font-size:20px;">
+  </br>Let me introduce myself, I am CCIB Sydent.
+  </br>I like Math, Music, Art, Coding.
+  </br>I do Gaming, Music, Art on YouTube.
+  </br><a title="Youtube" href="https://www.youtube.com/c/ccibyoutube" target="_blank" rel="noopener"><span style="background-color: #bb0000; color: #fff; display: inline-block; padding: 3px 6px; border-radius: 5px;"><img src="https://qph.fs.quoracdn.net/main-qimg-d89050c672775dae9f9501c329cf814e.webp" alt="Youtube" width="17" height="17" />&nbsp;Youtube Channel</span></a>
+  Subscribe my YouTube Channel.  
+  </br><a title="Discord server" href="https://discord.gg/9TFuxKF" target="_blank" rel="noopener"><span style="background-color: #7289da; color: #fff; display: inline-block; padding: 3px 6px; ; border-radius: 5px;"><img src="https://logo-logos.com/wp-content/uploads/2018/03/Discord_icon.png" alt="Discord server" width="19" height="19" /> Discord server</span></a>&nbsp;
+  Join my Discord server.
+  </br>Follow my Instagram. (link in up there)
+  </br>You can go explore here.
+  </p>
+  </div>
+
+<div style="background-image: url('./0media0/div0.png'); background-size: cover;padding: 20px;background-size: 100% 100%;">
+
+<p style="color:#888">
+<p style="color:#fff">A</p>
+<p style="color:#f88">0</p>
+<p style="color:#fb8">1</p>
+<p style="color:#ff8">2</p>
+<p style="color:#bf8">3</p>
+<p style="color:#8f8">4</p>
+<p style="color:#8fb">5</p>
+<p style="color:#8ff">6</p>
+<p style="color:#8bf">7</p>
+<p style="color:#88f">8</p>
+<p style="color:#b8f">9</p>
+<p style="color:#f8f">a</p>
+<p style="color:#f8b">b</p>
+<a class="page" href="./app/basketball.html" target="_blank">Basketball postion player</a>
+<a class="page" href="./app/15slidev1.html" target="_blank">15 Slides puzzle (V1)</a>
+
+  
+
+
+
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  .bar0{color:#fff;background-color:#878787}
+      .bar1{color:#fff;background-color:#cc4336}
+
+    .bar2{color:#fff;background-color:#f44336}
+</style>
+<body>
+
+<div class="w3-container">
+  <h2>Dynamic Progress Bar</h2>
+
+  <div class="bar0">
+    <div id="myBar" class="bar1" style="height:24px;width:0">
+       <div id="myBar2" class="bar2" style="height:24px;width:0"></div></div>
+  </div>
+  <br>
+
+  <button class="w3-button w3-green" onclick="move(10)">Click Me</button>
+   <button class="w3-button w3-green" onclick="move(50)">Click Me</button> 
+  <button class="w3-button w3-green" onclick="move(100)">Click Me</button> 
+  
+    <button class="w3-button w3-green" onclick="move2(10)">Click Me</button>
+   <button class="w3-button w3-green" onclick="move2(50)">Click Me</button> 
+  <button class="w3-button w3-green" onclick="move2(100)">Click Me</button> 
+</div>
+
+<script>
+function move(step) {
+  var elem = document.getElementById("myBar");   
+  var width = parseFloat(document.getElementById("myBar").style.width)
+  var id = setInterval(frame, 10);
+  function frame() {
+if(width < step){
+    if (width >= step) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+ }else{    if (width <= step) {
+      clearInterval(id);
+    } else {
+      width--; 
+      elem.style.width = width + '%'; 
+    }
+  }
+ }
+}
+function move2(step) {
+  var elem = document.getElementById("myBar2");   
+  var width = parseFloat(document.getElementById("myBar2").style.width)
+  var id = setInterval(frame, 10);
+  function frame() {
+if(width < step){
+    if (width >= step) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+ }else{    if (width <= step) {
+      clearInterval(id);
+    } else {
+      width--; 
+      elem.style.width = width + '%'; 
+    }
+  }
+ 
+  }
+}
+</script>
+
+</body>
+</html> 
